@@ -3,7 +3,7 @@
 
 ## installation
 ```shell
-npm install -S @feizheng/gulp-pkg-header 
+npm install -D @feizheng/gulp-pkg-header
 ```
 
 ## usage
