@@ -5,4 +5,4 @@
  * license: MIT
  */
 
-var header=require("gulp-header"),path=require("path"),nx=require("@feizheng/next-js-core2"),appPath=require("app-root-path").path,pkg=require(path.join(appPath,"./package.json"));require("@feizheng/next-nice-comments");var niceComments=nx.niceComments(["name: <%= pkg.name %>","description: <%= pkg.description %>","url: <%= pkg.homepage %>","version: <%= pkg.version %>","date: "+(new Date).toISOString(),"license: <%= pkg.license %>"],"js");module.exports=function(){return header(niceComments,{pkg:pkg})};
+var header=require("gulp-header"),path=require("path"),nx=require("@feizheng/next-js-core2"),appPath=require("app-root-path").path,pkg=require(path.join(appPath,"./package.json")),DEFAULT_FORMAT="yyyy-mm-dd HH:MM:ss",dateFormat=require("dateformat");require("@feizheng/next-nice-comments");var niceComments=nx.niceComments(["name: <%= pkg.name %>","description: <%= pkg.description %>","url: <%= pkg.homepage %>","version: <%= pkg.version %>","date: "+dateFormat(new Date,DEFAULT_FORMAT),"license: <%= pkg.license %>"],"js");module.exports=function(){return header(niceComments,{pkg:pkg})};

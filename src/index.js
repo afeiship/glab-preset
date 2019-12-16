@@ -3,6 +3,8 @@ var path = require('path');
 var nx = require('@feizheng/next-js-core2');
 var appPath = require('app-root-path').path;
 var pkg = require(path.join(appPath, './package.json'));
+var DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
+var dateFormat = require('dateformat');
 
 require('@feizheng/next-nice-comments');
 
@@ -12,7 +14,7 @@ var niceComments = nx.niceComments(
     'description: <%= pkg.description %>',
     'url: <%= pkg.homepage %>',
     'version: <%= pkg.version %>',
-    'date: ' + new Date().toISOString(),
+    'date: ' + dateFormat(new Date(), DEFAULT_FORMAT),
     'license: <%= pkg.license %>'
   ],
   'js'

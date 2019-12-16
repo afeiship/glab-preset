@@ -27,6 +27,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "app-root-path": "^3.0.0"
+    "app-root-path": "^3.0.0",
+    "dateformat": "^3.0.3"
   }
 }
