@@ -3,10 +3,15 @@
 
 ## installation
 ```shell
-npm install -D @feizheng/gulp-pkg-header
+npm install -D @jswork/gulp-pkg-header
 ```
 
 ## usage
 ```js
-// codes
+const header = require("gulp-pkg-header");
+gulp.task('build' , function(){
+  return gulp.src("./src/*.js")
+    .pipe(header())
+    .pipe(gulp.dest("dist"));
+});
 ```

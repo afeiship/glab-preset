@@ -1,6 +1,6 @@
 {
-  "name": "@feizheng/gulp-pkg-header",
-  "version": "1.0.4",
+  "name": "@jswork/gulp-pkg-header",
+  "version": "1.0.0",
   "description": "Gulp header form package.json.",
   "homepage": "https://github.com/afeiship/gulp-pkg-header",
   "author": {
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "jest"
+    "test": "jest",
+    "release": "release-it"
   },
   "main": "dist/index.js",
   "license": "MIT",
@@ -19,14 +20,17 @@
     "gulp-load-plugins": "^2.0.3",
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "jest": "^25.3.0"
+    "jest": "^25.3.0",
+    "release-it": "^14.2.1"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "gulp-header": "^2.0.9",
-    "@feizheng/next-nice-comments": "^1.0.1",
-    "app-root-path": "^3.0.0"
+    "@jswork/next": "^1.0.0",
+    "@jswork/next-nice-comments": "^1.0.1",
+    "app-root-path": "^3.0.0",
+    "gulp-header": "^2.0.9"
   }
 }
