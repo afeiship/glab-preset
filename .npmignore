@@ -11,5 +11,6 @@ gulpfile.js
 .editorconfig
 .npmrc
 .prettoerrc
+.prettierrc
 
 .release-it.json
