@@ -1,8 +1,28 @@
-/*!
- * name: @jswork/gulp-pkg-header
- * url: https://github.com/afeiship/gulp-pkg-header
- * version: 1.0.0
- * license: MIT
- */
+var header = require('gulp-header');
+var path = require('path');
+var nx = require('@jswork/next');
+var appPath = require('app-root-path').path;
+var pkg = require(path.join(appPath, './package.json'));
+var DEFAULT_OPTIONS = { type: 'js' };
 
-var header=require("gulp-header"),path=require("path"),nx=require("@jswork/next"),appPath=require("app-root-path").path,pkg=require(path.join(appPath,"./package.json"));require("@jswork/next-nice-comments");var generateComments=function(e){e=e||"js";return nx.niceComments(["name: <%= pkg.name %>","description: <%= pkg.description %>","homepage: <%= pkg.homepage %>","version: <%= pkg.version %>","date: "+(new Date).toISOString(),"license: <%= pkg.license %>"],e)};module.exports=function(e){return header(generateComments(e),{pkg:pkg})};
+require('@jswork/next-nice-comments');
+
+var generateComments = function (inType) {
+  var type = inType || 'js';
+  return nx.niceComments(
+    [
+      'name: <%= pkg.name %>',
+      'description: <%= pkg.description %>',
+      'homepage: <%= pkg.homepage %>',
+      'version: <%= pkg.version %>',
+      'date: ' + new Date().toISOString(),
+      'license: <%= pkg.license %>'
+    ],
+    type
+  );
+};
+
+module.exports = function (inOptions) {
+  var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+  return header(generateComments(options.type), { pkg: pkg });
+};

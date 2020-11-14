@@ -23,6 +23,8 @@
   gulp.task('scripts', function() {
     return gulp
       .src('src/*.js')
+      .pipe(gulp.dest('dist'))
+      .pipe($.rename({extname:'.min.js'}))
       .pipe($.uglify())
       .pipe($.header(niceComments, { pkg: pkg }))
       .pipe(gulp.dest('dist'))
