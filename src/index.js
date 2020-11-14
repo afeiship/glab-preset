@@ -3,6 +3,7 @@ var path = require('path');
 var nx = require('@jswork/next');
 var appPath = require('app-root-path').path;
 var pkg = require(path.join(appPath, './package.json'));
+var DEFAULT_OPTIONS = { type: 'js' };
 
 require('@jswork/next-nice-comments');
 
@@ -21,6 +22,7 @@ var generateComments = function (inType) {
   );
 };
 
-module.exports = function (inType) {
-  return header(generateComments(inType), { pkg: pkg });
+module.exports = function (inOptions) {
+  var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+  return header(generateComments(options.type), { pkg: pkg });
 };
