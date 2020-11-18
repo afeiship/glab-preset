@@ -1,3 +1,10 @@
+/*!
+ * name: @jswork/gulp-pkg-header
+ * url: https://github.com/afeiship/gulp-pkg-header
+ * version: 1.0.3
+ * license: MIT
+ */
+
 var header = require('gulp-header');
 var path = require('path');
 var nx = require('@jswork/next');
