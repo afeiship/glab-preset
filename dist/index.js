@@ -3,6 +3,8 @@ var path = require('path');
 var nx = require('@jswork/next');
 var appPath = require('app-root-path').path;
 var pkg = require(path.join(appPath, './package.json'));
+var dateformat = require('dateformat');
+var DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
 var DEFAULT_OPTIONS = { type: 'js' };
 
 require('@jswork/next-nice-comments');
@@ -15,7 +17,7 @@ var generateComments = function (inType) {
       'description: <%= pkg.description %>',
       'homepage: <%= pkg.homepage %>',
       'version: <%= pkg.version %>',
-      'date: ' + new Date().toISOString(),
+      'date: ' + dateformat(null, DEFAULT_FORMAT),
       'license: <%= pkg.license %>'
     ],
     type

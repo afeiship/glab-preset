@@ -1,8 +1,14 @@
 {
+  "git": {
+    "requireCleanWorkingDir": false
+  },
   "hooks": {
     "after:init": [
       "npm test",
       "t2k"
+    ],
+    "after:bump": [
+      "npm run build"
     ]
   },
   "github": {
