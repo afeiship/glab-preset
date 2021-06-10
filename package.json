@@ -32,7 +32,6 @@
   "dependencies": {
     "@jswork/next": "^1.0.0",
     "@jswork/next-nice-comments": "^1.0.1",
-    "app-root-path": "^3.0.0",
     "dateformat": "^3.0.3",
     "gulp-header": "^2.0.9"
   },

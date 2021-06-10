@@ -14,7 +14,7 @@
   const niceComments = nx.niceComments(
     [
       'name: <%= pkg.name %>',
-      'url: <%= pkg.homepage %>',
+      'homepage: <%= pkg.homepage %>',
       'version: <%= pkg.version %>',
       'license: <%= pkg.license %>'
     ],

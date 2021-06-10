@@ -1,8 +1,7 @@
 var header = require('gulp-header');
 var path = require('path');
 var nx = require('@jswork/next');
-var appPath = require('app-root-path').path;
-var pkg = require(path.join(appPath, './package.json'));
+var pkg = require(path.join(process.cwd(), './package.json'));
 var dateformat = require('dateformat');
 var DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
 var DEFAULT_OPTIONS = { type: 'js' };
