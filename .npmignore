@@ -7,10 +7,14 @@ __tests__
 src
 build
 gulpfile.js
+rollup.config.js
 
 .editorconfig
-.npmrc
-.prettoerrc
 .prettierrc
 
-.release-it.json
+# vscode
+.vscode
+.history
+.github
+api
+docs
