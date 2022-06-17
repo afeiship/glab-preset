@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "glab-preset"
+version = "0.1.0"
+description = "Gitlab preset tool."
+authors = ["afeiship <1290657123@qq.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+jsw-nx = "^1.0.102"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
