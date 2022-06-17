@@ -1,0 +1,11 @@
+name: react-oss
+description: "React Aliyun OSS project preset."
+envionments:
+  - name: ALIBABACLOUD_ACCESS_KEY_ID
+    value: ${{ env.ALIBABACLOUD_ACCESS_KEY_ID }}
+  - name: ALIBABACLOUD_ACCESS_KEY_SECRET
+    value: ${{ env.ALIBABACLOUD_ACCESS_KEY_SECRET }}
+  - name: ALIBABACLOUD_REGION_ID
+    value: ${{ env.ALIBABACLOUD_REGION_ID }}
+  - name: YARN_REGISTRY
+    value: ${{ env.$ALO7_YARN_REGISTRY }}
