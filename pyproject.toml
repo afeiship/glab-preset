@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "glab-preset"
-version = "0.1.1"
+version = "1.0.1"
 description = "Gitlab preset tool."
 authors = ["afeiship <1290657123@qq.com>"]
 license = "MIT"
+
+[tool.poetry.scripts]
+glab_preset = "glab_preset.main:cli"
 
 [tool.poetry.dependencies]
 python = "^3.8"
