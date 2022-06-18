@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "glab-preset"
-version = "1.0.2"
+version = "1.0.3"
 description = "Gitlab preset tool."
 authors = ["afeiship <1290657123@qq.com>"]
 license = "MIT"
