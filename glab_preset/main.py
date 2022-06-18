@@ -11,7 +11,7 @@ import click
 @click.option('--alibabacloud_access_key_secret', prompt=True, default=os.getenv('ALIBABACLOUD_ACCESS_KEY_SECRET'))
 @click.option('--alibabacloud_region_id', prompt=True, default=os.getenv('ALIBABACLOUD_REGION_ID'))
 def cli(**kwargs):
-  gl = gitlab.Gitlab(url="https://git.saybot.net/", private_token=os.getenv('GITLAB_TOKEN'))
+  gl = gitlab.Gitlab(url=os.getenv('ALO7_GITLAB_URL'), private_token=os.getenv('GITLAB_TOKEN'))
   prj = gl.projects.get(kwargs['project_id'])
 
   envs = [
