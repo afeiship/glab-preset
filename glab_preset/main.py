@@ -13,14 +13,14 @@ def cli(**kwargs):
   gl = gitlab.Gitlab(url=nx.getenv('ALO7_GITLAB_URL'), private_token=nx.getenv('GITLAB_TOKEN'))
   prj = gl.projects.get(kwargs['project_id'])
 
-  envs = [
+  vars = [
     {'key': 'YARN_REGISTRY', 'value': kwargs['yarn_registry']},
     {'key': 'ALIBABACLOUD_ACCESS_KEY_ID', 'value': kwargs['alibabacloud_access_key_id']},
     {'key': 'ALIBABACLOUD_ACCESS_KEY_SECRET', 'value': kwargs['alibabacloud_access_key_secret']},
     {'key': 'ALIBABACLOUD_REGION_ID', 'value': kwargs['alibabacloud_region_id']},
   ]
 
-  for item in envs:
+  for item in vars:
     prj.variables.create(item)
 
 

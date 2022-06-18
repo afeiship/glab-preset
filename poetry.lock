@@ -72,7 +72,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "jsw-nx"
-version = "1.0.102"
+version = "1.0.103"
 description = "Next toolkit for python."
 category = "dev"
 optional = false
@@ -217,8 +217,8 @@ idna = [
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
 ]
 jsw-nx = [
-    {file = "jsw-nx-1.0.102.tar.gz", hash = "sha256:22d67fc1b76ea807dc12579c6052ad653db626f8612b7c2bfd912dbcc7d7c036"},
-    {file = "jsw_nx-1.0.102-py3-none-any.whl", hash = "sha256:74691b82695bb2dd39a0a69f3994dbbc301881f64b63d5ac8e768e31299ccad8"},
+    {file = "jsw-nx-1.0.103.tar.gz", hash = "sha256:4fbf730281bad54eb0d2658bbff0d3f20455f1b0732c34aa7731e3eb394f013f"},
+    {file = "jsw_nx-1.0.103-py3-none-any.whl", hash = "sha256:044c28b0711eab4433a68d4b033a3fa06d3bac0bb3c333a53586648f097b41cd"},
 ]
 psutil = [
     {file = "psutil-5.9.1-cp27-cp27m-manylinux2010_i686.whl", hash = "sha256:799759d809c31aab5fe4579e50addf84565e71c1dc9f1c31258f159ff70d3f87"},
