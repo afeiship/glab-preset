@@ -1,5 +1,6 @@
 name: react-oss
 description: 'React Aliyun OSS project preset.'
+project_id: 2412
 ci_cd:
   variables:
     - name: ALIBABACLOUD_ACCESS_KEY_ID
@@ -9,4 +10,4 @@ ci_cd:
     - name: ALIBABACLOUD_REGION_ID
       value: ${{ env.ALIBABACLOUD_REGION_ID }}
     - name: YARN_REGISTRY
-      value: ${{ env.$ALO7_YARN_REGISTRY }}
+      value: ${{ env.ALO7_YARN_REGISTRY }}
