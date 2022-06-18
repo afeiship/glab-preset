@@ -26,4 +26,4 @@ def cli(**kwargs):
 
 
 if __name__ == '__main__':
-  cli(auto_envvar_prefix='GREETER')
+  cli()
