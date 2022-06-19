@@ -8,7 +8,7 @@
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "start": "python src/main.py"
+    "start": "python glab_preset/main.py"
   },
   "license": "MIT",
   "publishConfig": {
