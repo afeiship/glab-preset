@@ -10,7 +10,7 @@ import click
 @click.option('--alibabacloud_access_key_secret', prompt=True, default=nx.getenv('ALIBABACLOUD_ACCESS_KEY_SECRET'))
 @click.option('--alibabacloud_region_id', prompt=True, default=nx.getenv('ALIBABACLOUD_REGION_ID'))
 def react_oss(**kwargs):
-  gl = gitlab.Gitlab(url=nx.getenv('GITLAB_URL'), private_token=nx.getenv('GITLAB_TOKEN'))
+  gl = gitlab.Gitlab(url=nx.getenv('ALO7_GITLAB_URL'), private_token=nx.getenv('GITLAB_TOKEN'))
   prj = gl.projects.get(kwargs['project_id'])
 
   vars = [
