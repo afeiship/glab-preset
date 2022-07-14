@@ -2,7 +2,7 @@ import click
 
 
 @click.command()
-@click.option('--type', prompt=True, type=click.Choice(['react_oss', 'other']), default='react_oss')
+@click.option('--type', prompt=True, type=click.Choice(['react_oss', 'react_k8s']), default='react_oss')
 def cli(**kwargs):
   if 'react_oss' == kwargs.get('type'):
     from glab_preset.presets.react_oss import react_oss
