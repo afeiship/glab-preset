@@ -2,6 +2,8 @@ import jsw_nx as nx
 import gitlab
 import click
 
+from .misc import create_or_update
+
 
 @click.command()
 @click.option('--project_id', prompt=True, required=True, type=int)
@@ -21,4 +23,4 @@ def react_k8s(**kwargs):
   ]
 
   for item in vars:
-    prj.variables.create(item)
+    create_or_update(prj, item)
