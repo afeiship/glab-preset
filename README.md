@@ -9,9 +9,9 @@ pip install glab-preset -U
 ## usage
 ```shell
 $ glab-preset --help
-# create diffient type
-glab-preset --type=reac_oss
-glab-preset --type=reac_k8s
+
+# start to config
+glab-preset
 
 Usage: glab-preset [OPTIONS]
 
